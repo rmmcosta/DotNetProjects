@@ -1,0 +1,10 @@
+C:\Users\rco\source\repos\CopyImageToClipboard\CopyImageToClipboard\bin\Debug\CopyImageToClipboard.exe.config
+C:\Users\rco\source\repos\CopyImageToClipboard\CopyImageToClipboard\bin\Debug\CopyImageToClipboard.exe
+C:\Users\rco\source\repos\CopyImageToClipboard\CopyImageToClipboard\bin\Debug\CopyImageToClipboard.pdb
+C:\Users\rco\source\repos\CopyImageToClipboard\CopyImageToClipboard\obj\Debug\CopyImageToClipboard.csprojAssemblyReference.cache
+C:\Users\rco\source\repos\CopyImageToClipboard\CopyImageToClipboard\obj\Debug\CopyImageToClipboard.Properties.Resources.resources
+C:\Users\rco\source\repos\CopyImageToClipboard\CopyImageToClipboard\obj\Debug\CopyImageToClipboard.csproj.GenerateResource.cache
+C:\Users\rco\source\repos\CopyImageToClipboard\CopyImageToClipboard\obj\Debug\CopyImageToClipboard.csproj.CoreCompileInputs.cache
+C:\Users\rco\source\repos\CopyImageToClipboard\CopyImageToClipboard\obj\Debug\CopyImageToClipboard.exe
+C:\Users\rco\source\repos\CopyImageToClipboard\CopyImageToClipboard\obj\Debug\CopyImageToClipboard.pdb
+C:\Users\rco\source\repos\CopyImageToClipboard\CopyImageToClipboard\obj\Debug\CopyImageToClipboard.CopyToClipboard.resources

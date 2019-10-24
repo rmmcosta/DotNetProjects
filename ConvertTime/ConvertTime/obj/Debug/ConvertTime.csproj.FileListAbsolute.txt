@@ -1,0 +1,7 @@
+C:\Users\rco\source\repos\ConvertTime\ConvertTime\bin\Debug\ConvertTime.exe.config
+C:\Users\rco\source\repos\ConvertTime\ConvertTime\bin\Debug\ConvertTime.exe
+C:\Users\rco\source\repos\ConvertTime\ConvertTime\bin\Debug\ConvertTime.pdb
+C:\Users\rco\source\repos\ConvertTime\ConvertTime\obj\Debug\ConvertTime.csprojAssemblyReference.cache
+C:\Users\rco\source\repos\ConvertTime\ConvertTime\obj\Debug\ConvertTime.csproj.CoreCompileInputs.cache
+C:\Users\rco\source\repos\ConvertTime\ConvertTime\obj\Debug\ConvertTime.exe
+C:\Users\rco\source\repos\ConvertTime\ConvertTime\obj\Debug\ConvertTime.pdb

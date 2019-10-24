@@ -1,0 +1,13 @@
+C:\Users\rco\source\repos\ParallelCallApi\ParallelCallApi\bin\Debug\ParallelCallApi.exe.config
+C:\Users\rco\source\repos\ParallelCallApi\ParallelCallApi\bin\Debug\ParallelCallApi.exe
+C:\Users\rco\source\repos\ParallelCallApi\ParallelCallApi\bin\Debug\ParallelCallApi.pdb
+C:\Users\rco\source\repos\ParallelCallApi\ParallelCallApi\obj\Debug\ParallelCallApi.csprojAssemblyReference.cache
+C:\Users\rco\source\repos\ParallelCallApi\ParallelCallApi\obj\Debug\ParallelCallApi.ParallelCallApi.resources
+C:\Users\rco\source\repos\ParallelCallApi\ParallelCallApi\obj\Debug\ParallelCallApi.Properties.Resources.resources
+C:\Users\rco\source\repos\ParallelCallApi\ParallelCallApi\obj\Debug\ParallelCallApi.csproj.GenerateResource.cache
+C:\Users\rco\source\repos\ParallelCallApi\ParallelCallApi\obj\Debug\ParallelCallApi.csproj.CoreCompileInputs.cache
+C:\Users\rco\source\repos\ParallelCallApi\ParallelCallApi\obj\Debug\ParallelCallApi.exe
+C:\Users\rco\source\repos\ParallelCallApi\ParallelCallApi\obj\Debug\ParallelCallApi.pdb
+C:\Users\rco\source\repos\ParallelCallApi\ParallelCallApi\bin\Debug\Newtonsoft.Json.dll
+C:\Users\rco\source\repos\ParallelCallApi\ParallelCallApi\bin\Debug\Newtonsoft.Json.xml
+C:\Users\rco\source\repos\ParallelCallApi\ParallelCallApi\obj\Debug\ParallelCallApi.csproj.CopyComplete
