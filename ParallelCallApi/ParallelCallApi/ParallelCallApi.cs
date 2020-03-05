@@ -53,13 +53,11 @@ namespace ParallelCallApi
                 jsonObject.Result = responseBody;
                 jsonObject.Guid = guid;
                 StringContent content = new StringContent(jsonObject.ToString(), Encoding.UTF8, "application/json");
-                /*var content = new FormUrlEncodedContent(new[]
-                {
-                        new KeyValuePair<string, string>("Result", responseBody),
-                        new KeyValuePair<string, string>("Guid", guid)
-                });*/
-               
-                await postApi(posturl,content);
+
+                //string jsonObject = "{'Result':'" + responseBody + "','Guid':'" + guid + "'}";
+                //StringContent content = new StringContent(jsonObject, Encoding.UTF8, "application/json");
+
+                await postApi(posturl, content);
                 // Above three lines can be replaced with new helper method below
                 // string responseBody = await client.GetStringAsync(uri);
 
@@ -79,8 +77,20 @@ namespace ParallelCallApi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            getApi(getUrlTextBox.Text, postUrlTextBox.Text, guidTextBox.Text);
+            getApi(getUrlTextBox.Text, postUrlTextBox.Text + "Divide", guidTextBox.Text);
+            getApi(textBox1.Text, postUrlTextBox.Text + "Sub", guidTextBox.Text);
+            getApi(textBox2.Text, postUrlTextBox.Text + "Sum", guidTextBox.Text);
+            getApi(textBox3.Text, postUrlTextBox.Text + "Multiply", guidTextBox.Text);
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            List<Task> taskList = new List<Task>();
+            taskList.Add(Task.Factory.StartNew(() => getApi(getUrlTextBox.Text, postUrlTextBox.Text + "Divide", guidTextBox.Text)));
+            taskList.Add(Task.Factory.StartNew(() => getApi(textBox1.Text, postUrlTextBox.Text + "Sub", guidTextBox.Text)));
+            taskList.Add(Task.Factory.StartNew(() => getApi(textBox2.Text, postUrlTextBox.Text + "Sum", guidTextBox.Text)));
+            taskList.Add(Task.Factory.StartNew(() => getApi(textBox3.Text, postUrlTextBox.Text + "Multiply", guidTextBox.Text)));
+            Task.WaitAll(taskList.ToArray());
+        }
     }
 }
