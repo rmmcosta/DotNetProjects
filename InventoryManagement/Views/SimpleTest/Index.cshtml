@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "SimpleTest";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{int favoriteNumber = 10; }
+
+@{String bornMonth = "October"; }
+
+<h1>SimpleTest</h1>
+
+<p>My favorite number is: @favoriteNumber</p>
+<p>I've born in: @bornMonth</p>
+
+@{ 
+    String local = "Principality";
+    var weekDay = DateTime.Now.DayOfWeek;
+    var time = DateTime.Now.Hour;
+    var greetings = "Today I'm at " + local + " this is on a " + weekDay + " at " + time;
+}
+
+<p>@greetings</p>
+
