@@ -2,9 +2,9 @@
 
 int main()
 {
-	/*Board* b = new Board();
+	Board* b = new Board();
 	b->showBoard();
 	b->start();
-	b->play();*/
+	b->play();
 	return 0;
 }
