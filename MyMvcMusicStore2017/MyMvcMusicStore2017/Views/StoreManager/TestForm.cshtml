@@ -1,0 +1,30 @@
+﻿@model MyMvcMusicStore2017.Models.Artist
+
+@{
+    ViewBag.Title = "Test Form";
+}
+
+<h2>Test Form</h2>
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.Label("Album")
+        @Html.Editor("Album")
+    </div>
+    <div class="form-group">
+        @Html.Label("Album.Title")
+        @Html.Editor("Album.Title")
+    </div>
+    <div class="form-group">
+        @Html.Label("Artist")
+        @Html.TextBox("Artist")
+    </div>
+    <div class="form-group">
+        @Html.Label("Artist.Name")
+        @Html.Editor("Artist.Name")
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name)
+        @Html.EditorFor(model => model.Name)
+    </div>
+}

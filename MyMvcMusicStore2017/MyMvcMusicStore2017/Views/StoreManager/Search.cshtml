@@ -1,0 +1,30 @@
+﻿@model IEnumerable<MyMvcMusicStore2017.Models.Album>
+
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Search</h2>
+
+<table class="table table-condensed table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Artist</th>
+            <th>Genre</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var each in Model)
+        {
+            <tr>
+                <td>@each.Title</td>
+                <td>@each.Artist.Name</td>
+                <td>@each.Genre.Name</td>
+                <td>@String.Format("{0:c}", each.Price)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

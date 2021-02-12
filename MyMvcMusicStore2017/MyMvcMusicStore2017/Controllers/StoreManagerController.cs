@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using MyMvcMusicStore2017.Models;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using MyMvcMusicStore2017.Models;
 
 namespace MyMvcMusicStore2017.Controllers
 {
@@ -18,6 +15,13 @@ namespace MyMvcMusicStore2017.Controllers
         public ActionResult Index()
         {
             var albums = db.Albums.Include(a => a.Artist).Include(a => a.Genre);
+            return View(albums.ToList());
+        }
+
+        // GET: Search any album title
+        public ActionResult Search(string inSearch)
+        {
+            var albums = db.Albums.Where(a=>a.Title.Contains(inSearch)).Take(10);
             return View(albums.ToList());
         }
 
@@ -85,7 +89,7 @@ namespace MyMvcMusicStore2017.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "AlbumId,GenreId,ArtistId,Title,AlbumArtUrl")] Album album)
+        public ActionResult Edit([Bind(Include = "AlbumId,GenreId,ArtistId,Title,AlbumArtUrl,Price")] Album album)
         {
             if (ModelState.IsValid)
             {
@@ -122,6 +126,14 @@ namespace MyMvcMusicStore2017.Controllers
             db.Albums.Remove(album);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        //get test form
+        public ActionResult TestForm()
+        {
+            ViewBag.Album = new Album { Title = "Cenas" };
+            var Artist = new Artist { Name = "Portugal the Man" };
+            return View(Artist);
         }
 
         protected override void Dispose(bool disposing)
