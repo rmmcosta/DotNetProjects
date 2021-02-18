@@ -9,6 +9,26 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+<div class="panel panel-default">
+    <div class="panel-heading">Artist Search</div>
+    <div class="panel-body">
+        @using (Ajax.BeginForm("ArtistSearch", "StoreManager",
+            new AjaxOptions
+            {
+                UpdateTargetId = "searchresults",
+                InsertionMode = InsertionMode.Replace,
+                HttpMethod = "GET",
+                LoadingElementId = "ajax-loader"
+            }
+        ))
+        {
+            <input type="text" name="q" />
+            <input type="submit" value="search" />
+            <i id="ajax-loader" class="fa fa-circle-o-notch fa-spin" style="display:none"></i>
+        }
+        <div id="searchresults"></div>
+    </div>
+</div>
 <table class="table">
     <tr>
         <th>
@@ -56,3 +76,29 @@
     }
 
 </table>
+
+<div id="album-list" class="row mb-4">
+    @foreach (var item in Model)
+    {
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4 p-4">
+            <div class="bg-white rounded shadow-sm">
+                <img src="@item.AlbumArtUrl" title="@item.Title" alt="@item.Title" class="img-fluid card-img-top" width="250">
+                <div class="p-4">
+                    <h5> <a href="#" class="text-dark">@item.Title</a></h5>
+                    <p class="small text-muted mb-0">@item.Genre.Name</p>
+                    <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                        <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">@item.Artist.Name</span></p>
+                        <div class="badge badge-success px-3 rounded-pill font-weight-normal">@item.Price</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@{Html.RenderPartial("_DailyDealLink");}
+
+@section scripts {
+    <script src="~/Scripts/App/StoreManager.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+}

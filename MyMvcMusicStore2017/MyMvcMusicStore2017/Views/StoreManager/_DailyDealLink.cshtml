@@ -1,0 +1,14 @@
+﻿<div id="dailydeal">
+    @Ajax.ActionLink("Click here to see the deal of the day!",
+        "DailyDeal",
+        null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "dailydeal",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "GET"
+        },
+        new {@class = "btn btn-primary"}
+    )
+</div>
+

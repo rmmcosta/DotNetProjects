@@ -54,9 +54,9 @@ namespace MyMvcMusicStore2017
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "430535261561547",
+               appSecret: "c962b75b318613601e40406d45fbd910");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

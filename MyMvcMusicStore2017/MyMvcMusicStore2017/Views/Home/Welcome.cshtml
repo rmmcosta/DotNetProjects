@@ -1,0 +1,12 @@
+﻿@using Microsoft.Security.Application
+@{
+    ViewBag.Title = "Welcome";
+}
+
+<h2 id="welcome-message"></h2>
+
+@section scripts {
+    <script type="text/javascript">var msg = 'Welcome, @Encoder.JavaScriptEncode(ViewBag.Username, false)';</script>
+    <script src="~/Scripts/App/MusicStoreScripts.js"></script>
+}
+

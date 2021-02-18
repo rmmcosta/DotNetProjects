@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using Microsoft.Security.Application;
+using System.Web.Mvc;
 
 namespace MyMvcMusicStore2017.Controllers
 {
@@ -20,6 +21,12 @@ namespace MyMvcMusicStore2017.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        public ActionResult Welcome(string username)
+        {
+            ViewBag.Username = username==null?"John Doe":Sanitizer.GetSafeHtmlFragment(username);
             return View();
         }
     }

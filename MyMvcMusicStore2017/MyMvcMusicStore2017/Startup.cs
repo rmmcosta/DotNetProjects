@@ -9,6 +9,7 @@ namespace MyMvcMusicStore2017
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+            
         }
     }
 }

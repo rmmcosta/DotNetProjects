@@ -1,0 +1,26 @@
+﻿@model MyMvcMusicStore2017.Models.Album
+
+<div class="panel panel-primary" id="dailydeal">
+    <div class="panel-heading">
+        <div class="panel-title">The deal of the day:@Model.Title</div>
+    </div>
+    <div class="panel-body">
+        <img src="@Model.AlbumArtUrl" width="200" />
+        <h3>@Model.Artist.Name</h3>
+        <h4>@Model.Price</h4>
+        <span>@Model.Genre.Name</span>
+    </div>
+    <div class="panel-footer">
+        @Ajax.ActionLink("Cancel",
+            "CancelDailyDeal",
+            null,
+            new AjaxOptions
+            {
+                UpdateTargetId = "dailydeal",
+                InsertionMode = InsertionMode.Replace,
+                HttpMethod = "GET"
+            },
+            new {@class = "btn btn-primary"}
+       )
+    </div>
+</div>

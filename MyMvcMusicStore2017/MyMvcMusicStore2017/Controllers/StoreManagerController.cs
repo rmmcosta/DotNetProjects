@@ -1,8 +1,10 @@
 ﻿using MyMvcMusicStore2017.Models;
+using System;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Threading;
 using System.Web.Mvc;
 
 namespace MyMvcMusicStore2017.Controllers
@@ -21,7 +23,7 @@ namespace MyMvcMusicStore2017.Controllers
         // GET: Search any album title
         public ActionResult Search(string inSearch)
         {
-            var albums = db.Albums.Where(a=>a.Title.Contains(inSearch)).Take(10);
+            var albums = db.Albums.Where(a => a.Title.Contains(inSearch)).Take(10);
             return View(albums.ToList());
         }
 
@@ -134,6 +136,33 @@ namespace MyMvcMusicStore2017.Controllers
             ViewBag.Album = new Album { Title = "Cenas" };
             var Artist = new Artist { Name = "Portugal the Man" };
             return View(Artist);
+        }
+
+        //get the daily deal
+        public ActionResult DailyDeal()
+        {
+            var album = GetDailyDeal();
+            return PartialView("_DailyDeal", album);
+        }
+
+        private Album GetDailyDeal()
+        {
+            var album = db.Albums.OrderBy(a => Guid.NewGuid()).First();
+            album.Price *= 0.5m;
+            album.Price = Math.Round(album.Price, 2);
+            return album;
+        }
+
+        public ActionResult CancelDailyDeal()
+        {
+            return PartialView("_DailyDealLink");
+        }
+
+        public ActionResult ArtistSearch(string q)
+        {
+            var artists = db.Artists.Where(a => a.Name.Contains(q));
+            Thread.Sleep(2000);
+            return PartialView("_ArtistSearch", artists);
         }
 
         protected override void Dispose(bool disposing)
