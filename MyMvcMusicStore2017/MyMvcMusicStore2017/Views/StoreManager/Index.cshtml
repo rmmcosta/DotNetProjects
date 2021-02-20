@@ -23,7 +23,7 @@
             }
         ))
         {
-            <input type="text" name="q" />
+            <input type="text" name="q" data-autocomplete-source="@Url.Action("ArtistQuickSearch","StoreManager")" />
             <input type="submit" value="search" />
             <i id="ajax-loader" class="fa fa-circle-o-notch fa-spin" style="display:none"></i>
         }

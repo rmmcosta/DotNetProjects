@@ -1,5 +1,6 @@
 ﻿using MyMvcMusicStore2017.Models;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
@@ -165,6 +166,18 @@ namespace MyMvcMusicStore2017.Controllers
             var artists = db.Artists.Where(a => a.Name.Contains(q));
             Thread.Sleep(2000);
             return PartialView("_ArtistSearch", artists);
+        }
+
+        public JsonResult ArtistQuickSearch(string term)
+        {
+            var artists = GetArtists(term).Select(a => new { label = a.Name });
+            return Json(artists, JsonRequestBehavior.AllowGet);
+        }
+
+        private List<Artist> GetArtists(string q)
+        {
+            var artists = db.Artists.Where(a => a.Name.Contains(q)).ToList();
+            return artists;
         }
 
         protected override void Dispose(bool disposing)
