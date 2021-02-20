@@ -1,5 +1,8 @@
 ﻿$(function () {
     $('#album-list img')
-        .mouseover(function () { $(this).animate({ width: '+=25', height: '+=25' }); })
-        .mouseout(function () { $(this).animate({ width: '-=25', height: '-=25' }); });
+        .mouseover(function () { $(this).effect('bounce', { time: 1, distance: 10 }); });
 });
+
+function searchFailure() {
+    $("#searchresults").html("Sorry, an error has occurred. Please try again.");
+}

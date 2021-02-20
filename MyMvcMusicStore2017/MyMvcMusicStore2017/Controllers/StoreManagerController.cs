@@ -55,7 +55,7 @@ namespace MyMvcMusicStore2017.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "AlbumId,GenreId,ArtistId,Title,AlbumArtUrl")] Album album)
+        public ActionResult Create([Bind(Include = "AlbumId,GenreId,ArtistId,Title,AlbumArtUrl,Price")] Album album)
         {
             if (ModelState.IsValid)
             {
@@ -160,6 +160,8 @@ namespace MyMvcMusicStore2017.Controllers
 
         public ActionResult ArtistSearch(string q)
         {
+            if (q.Contains("error"))
+                throw new Exception("An error has occurred!");
             var artists = db.Artists.Where(a => a.Name.Contains(q));
             Thread.Sleep(2000);
             return PartialView("_ArtistSearch", artists);
