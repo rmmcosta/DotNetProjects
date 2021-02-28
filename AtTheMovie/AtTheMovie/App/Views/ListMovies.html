@@ -1,0 +1,9 @@
+﻿<div ng-controller="ListController">
+    <span>Records: {{movies.data.length}}</span>
+    <table>
+        <tr ng-repeat="movie in movies.data">
+            <td>{{movie.Title}}</td>
+            <td><a href="#!/details/{{movie.ID}}">Detail</a></td>
+        </tr>
+    </table>
+</div>

@@ -1,8 +1,8 @@
 ﻿using System.Data.Entity;
 
-namespace MyMvcMusicStore2017.Models
+namespace ProductsWebApi.Models
 {
-    public class MusicStoreDB : DbContext
+    public class ProductsWebApiContext : DbContext
     {
         // You can add custom code to this file. Changes will not be overwritten.
         // 
@@ -11,14 +11,15 @@ namespace MyMvcMusicStore2017.Models
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
     
-        public MusicStoreDB() : base("name=MusicStoreDB")
+        /// <summary>
+        /// auto created data base context
+        /// </summary>
+        public ProductsWebApiContext() : base("name=ProductsWebApiContext")
         {
         }
-
-        public DbSet<Album> Albums { get; set; }
-
-        public DbSet<Artist> Artists { get; set; }
-
-        public DbSet<Genre> Genres { get; set; }
+        /// <summary>
+        /// db set products
+        /// </summary>
+        public DbSet<Areas.ProductArea.Models.Product> Products { get; set; }
     }
 }
