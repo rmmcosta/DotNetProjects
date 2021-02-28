@@ -176,7 +176,10 @@
   <ItemGroup>
     <Content Include="App\Scripts\atTheMovie.js" />
     <Content Include="App\Scripts\DetailController.js" />
+    <Content Include="App\Scripts\EditController.js" />
     <Content Include="App\Scripts\ListController.js" />
+    <Content Include="App\Scripts\movieService.js" />
+    <Content Include="App\Views\EditMovie.html" />
     <Content Include="App\Views\ListMovies.html" />
     <Content Include="App\Views\MovieDetail.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />

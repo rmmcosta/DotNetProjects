@@ -1,9 +1,12 @@
 ﻿<div ng-controller="ListController">
     <span>Records: {{movies.data.length}}</span>
-    <table>
+    <a id="showModal" ng-click="create()"  data-toggle="modal" data-target="#movieModal">Create Movie</a>
+    <div ng-include="'/App/Views/EditMovie.html'"></div>
+    <table class="table table-striped">
         <tr ng-repeat="movie in movies.data">
             <td>{{movie.Title}}</td>
             <td><a href="#!/details/{{movie.ID}}">Detail</a></td>
+            <td><a ng-click="delete(movie)">Delete</a></td>
         </tr>
     </table>
 </div>
