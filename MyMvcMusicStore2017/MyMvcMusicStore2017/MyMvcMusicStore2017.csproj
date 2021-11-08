@@ -251,6 +251,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Images\ajax-loader.gif" />
     <Content Include="Scripts\App\CustomValidators.js" />
+    <Content Include="Scripts\App\EditForm.js" />
     <Content Include="Scripts\App\StoreManager.js" />
     <Content Include="Scripts\App\Welcome.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -320,6 +321,7 @@
     <Content Include="Views\StoreManager\_DailyDeal.cshtml" />
     <Content Include="Views\StoreManager\_DailyDealLink.cshtml" />
     <Content Include="Views\StoreManager\_ArtistSearch.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

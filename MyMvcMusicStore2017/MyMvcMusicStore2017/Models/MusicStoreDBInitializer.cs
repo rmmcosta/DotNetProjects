@@ -15,9 +15,10 @@ namespace MyMvcMusicStore2017.Models
             context.Albums.Add(new Album
             {
                 Artist = new Artist { Name = "The Best" },
-                Genre = new Genre { Name="Classic"},
+                Genre = new Genre { Name = "Classic" },
                 Title = "Album 10",
                 Price = 29.99m,
+                ReleaseDateTime = DateTime.Now,
                 AlbumArtUrl = "https://media.gettyimages.com/photos/listening-some-good-music-picture-id930312336?s=2048x2048"
             });
             context.Albums.Add(new Album
@@ -26,6 +27,7 @@ namespace MyMvcMusicStore2017.Models
                 Genre = new Genre { Name = "Rock" },
                 Title = "Album 20",
                 Price = 19.99m,
+                ReleaseDateTime = DateTime.Now,
                 AlbumArtUrl = "https://media.gettyimages.com/photos/my-favourite-playlist-picture-id542711924?s=2048x2048"
             });
             context.Albums.Add(new Album
@@ -34,6 +36,7 @@ namespace MyMvcMusicStore2017.Models
                 Genre = new Genre { Name = "Alternative" },
                 Title = "Album 30",
                 Price = 39.99m,
+                ReleaseDateTime = DateTime.Now,
                 AlbumArtUrl = "https://media.gettyimages.com/photos/beautiful-woman-sitting-on-sofa-in-living-room-picture-id1182942337?s=2048x2048"
             });
             base.Seed(context);

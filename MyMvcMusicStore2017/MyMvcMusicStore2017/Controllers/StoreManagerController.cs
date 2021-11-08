@@ -56,7 +56,7 @@ namespace MyMvcMusicStore2017.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "AlbumId,GenreId,ArtistId,Title,AlbumArtUrl,Price")] Album album)
+        public ActionResult Create([Bind(Include = "AlbumId,GenreId,ArtistId,Title,AlbumArtUrl,Price,ReleaseDateTime")] Album album)
         {
             if (ModelState.IsValid)
             {
@@ -92,7 +92,7 @@ namespace MyMvcMusicStore2017.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "AlbumId,GenreId,ArtistId,Title,AlbumArtUrl,Price")] Album album)
+        public ActionResult Edit([Bind(Include = "AlbumId,GenreId,ArtistId,Title,AlbumArtUrl,Price,ReleaseDateTime")] Album album)
         {
             if (ModelState.IsValid)
             {

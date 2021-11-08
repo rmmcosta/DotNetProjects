@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayMaxValue", "ArrayMaxValue.csproj", "{37FC6681-76AA-46FC-88FF-3B2623FC3D4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayMaxValueTest", "..\MyFirstUnitTestTest\ArrayMaxValueTest.csproj", "{F6A1E677-7690-46D2-8045-E85FB1409951}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37FC6681-76AA-46FC-88FF-3B2623FC3D4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37FC6681-76AA-46FC-88FF-3B2623FC3D4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37FC6681-76AA-46FC-88FF-3B2623FC3D4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37FC6681-76AA-46FC-88FF-3B2623FC3D4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6A1E677-7690-46D2-8045-E85FB1409951}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6A1E677-7690-46D2-8045-E85FB1409951}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6A1E677-7690-46D2-8045-E85FB1409951}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6A1E677-7690-46D2-8045-E85FB1409951}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B7D3D35D-1D33-4310-94B3-7D65240075C1}
+	EndGlobalSection
+EndGlobal
